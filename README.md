@@ -1,4 +1,4 @@
-# 📒 ContactosCRUD — AWS Lambda + DynamoDB
+# ContactosCRUD — AWS Lambda + DynamoDB
 
 > **Actividad Práctica — 30% de la Nota Final**  
 > Desarrollo de Aplicación CRUD con AWS (Capa Gratuita) y Amazon DynamoDB
@@ -11,7 +11,7 @@
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -54,7 +54,7 @@ Servicios AWS utilizados (todos en capa gratuita):
 
 ---
 
-## ✅ Operaciones CRUD implementadas
+## Operaciones CRUD implementadas
 
 | Operación | Método HTTP | Endpoint | Descripción |
 |---|---|---|---|
@@ -66,7 +66,7 @@ Servicios AWS utilizados (todos en capa gratuita):
 
 ---
 
-## 🚀 Guía de Despliegue paso a paso
+## Guía de Despliegue paso a paso
 
 ### Prerrequisitos
 
@@ -262,7 +262,7 @@ aws apigateway create-deployment \
   --rest-api-id $API_ID \
   --stage-name prod
 
-echo "✅ URL de la API:"
+echo "URL de la API:"
 echo "https://${API_ID}.execute-api.us-east-1.amazonaws.com/prod/contactos"
 ```
 
@@ -297,7 +297,7 @@ aws s3api put-bucket-policy --bucket $BUCKET --policy '{
 # 5. Subir el frontend
 aws s3 cp frontend/index.html s3://$BUCKET/
 
-echo "✅ URL del sitio:"
+echo "URL del sitio:"
 echo "http://${BUCKET}.s3-website-us-east-1.amazonaws.com"
 ```
 
@@ -315,7 +315,7 @@ aws cloudformation deploy \
 
 ---
 
-## 🧪 Pruebas con curl
+## Pruebas con curl
 
 ```bash
 BASE="https://TU_API_ID.execute-api.us-east-1.amazonaws.com/prod/contactos"
@@ -342,7 +342,7 @@ curl -X DELETE $BASE/{ID}
 
 ---
 
-## 🔒 Seguridad implementada
+## Seguridad implementada
 
 | Medida | Implementación |
 |---|---|
@@ -356,7 +356,7 @@ curl -X DELETE $BASE/{ID}
 
 ---
 
-## 🗂️ Estructura del repositorio
+## Estructura del repositorio
 
 ```
 crud-contactos-aws/
@@ -372,7 +372,7 @@ crud-contactos-aws/
 
 ---
 
-## ⚙️ Decisiones técnicas
+## Decisiones técnicas
 
 **¿Por qué Lambda + API Gateway en lugar de EC2?**  
 Lambda en la capa gratuita ofrece 1 millón de invocaciones mensuales gratuitas indefinidamente, sin necesidad de mantener un servidor encendido. EC2 con t2.micro solo es gratuito el primer año.
