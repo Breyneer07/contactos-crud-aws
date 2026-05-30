@@ -389,17 +389,6 @@ Permite múltiples registros futuros por usuario (ej. contactos duplicados en or
 **¿Por qué ConditionExpression en UPDATE y DELETE?**  
 Previene race conditions: si dos usuarios intentan eliminar el mismo contacto simultáneamente, solo uno tiene éxito y el otro recibe un error claro (409 Conflict) en lugar de un error genérico.
 
----
 
-## 📊 Escala de calificación
-
-| % | Nota | Resultado |
-|---|---|---|
-| 0–49% | 0.0–2.4 | ❌ Reprobado |
-| 50–69% | 2.5–3.4 | ⚠ Mínimo aprobatorio |
-| 70–89% | 3.5–4.4 | ✔ Aprobado |
-| **90–100%** | **4.5–5.0** | **⭐ Excelente** |
-
----
 
 *Integrantes: RIOS GONZALEZ JUAN MIGUEL · NIETO CARDEÑO BREYNEER · GARCIA ILIAS ALEXA TATIANA*
